@@ -1,0 +1,12 @@
+.course-nav {
+    padding-left: 150px;
+}
+
+.course-tabs {
+    padding-left: 20px; /* Adjust as needed */
+    flex-grow: 1; /* Ensures this section grows to fill the space */
+}
+
+h2 {
+    padding-left: 150px;
+}

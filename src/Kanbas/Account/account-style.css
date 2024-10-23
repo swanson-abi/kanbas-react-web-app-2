@@ -1,0 +1,60 @@
+.account-nav {
+    padding-left: 150px;/* Add any necessary padding, width, or positioning */
+}
+
+.account-content {
+    padding-left: 20px; /* Adjust this as needed for spacing */
+    flex-grow: 1; 
+}
+#wd-profile-screen {
+    max-width: 400px; /* Adjust as needed */
+    padding: 20px;
+    background-color: #fff; /* White background */
+  }
+  
+  #wd-profile-screen h3 {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  #wd-profile-screen input, 
+  #wd-profile-screen select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  #wd-profile-screen input[type="date"] {
+    padding-right: 30px;
+  }
+  
+  #wd-profile-screen input:focus, 
+  #wd-profile-screen select:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  #wd-profile-screen select {
+    padding: 10px;
+  }
+  
+  #wd-profile-screen a {
+    display: block;
+    text-align: left;
+    background-color: #dc3545; /* Red color for the button */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  #wd-profile-screen a:hover {
+    background-color: #c82333;
+  }
+  
