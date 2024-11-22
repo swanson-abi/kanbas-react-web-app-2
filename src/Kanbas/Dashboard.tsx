@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import * as db from "./Database";
+
 
 export default function Dashboard({
   courses, course, setCourse, addNewCourse,
@@ -11,8 +11,6 @@ export default function Dashboard({
   updateCourse: () => void;
 }) {
   const { currentUser } = useSelector((state: any) => state.accountReducer);
-  const { enrollments } = db;
-
   return (
     <div id="wd-dashboard">
       <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
@@ -33,14 +31,8 @@ export default function Dashboard({
       <h2 id="wd-dashboard-published">Published Courses ({courses.length})</h2> <hr />
       <div id="wd-dashboard-courses" className="row">
         <div className="row row-cols-1 row-cols-md-5 g-4">
-          
+
           {courses
-            .filter((course) =>
-              enrollments.some(
-                (enrollment) =>
-                  enrollment.user === currentUser._id &&
-                  enrollment.course === course._id
-              ))
             .map((course) => (
               <div key={course._id} className="wd-dashboard-course col" style={{ width: "300px" }}>
                 <div className="card rounded-3 overflow-hidden">
@@ -54,18 +46,18 @@ export default function Dashboard({
                       <p className="wd-dashboard-course-title card-text overflow-y-hidden" style={{ maxHeight: 100 }}>
                         {course.description}
                       </p>
-                      
+
                       <button className="btn btn-primary"> Go </button>
-                      
+
                       <button onClick={(event) => {
                         event.preventDefault();
                         deleteCourse(course._id);
-                      }} 
-                      className="btn btn-danger float-end"
+                      }}
+                        className="btn btn-danger float-end"
                         id="wd-delete-course-click">
                         Delete
                       </button>
-                      
+
                       <button id="wd-edit-course-click"
                         onClick={(event) => {
                           event.preventDefault();
